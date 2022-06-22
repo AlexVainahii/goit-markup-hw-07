@@ -41,6 +41,17 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 }
+
+.logo {  max-width: 145px;
+  font-family: "Raleway",sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--accent-text-color);
+  cursor: pointer;
+}
+
 /* ----------------HEADER------------------- */
 
 .header .container {
@@ -51,7 +62,7 @@ body {
   border-bottom: 1px solid var(--border-bottom-color);
 }
 
-.header .logo {
+.header__logo {
   display: block;
   margin-right: 93px;
   padding-top: 24px;
@@ -77,18 +88,9 @@ body {
 .contacts-icon {
   display: inline-block;
 }
-.logo {
-  max-width: 145px;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  color: var(--accent-text-color);
-  cursor: pointer;
-}
 
-.header-logo-text {
+
+.logo__text--black {
   color: var(--accent-btn-text-color);
 }
 .nav-link,
@@ -389,7 +391,7 @@ body {
   position: relative;
 }
 
-.logo .footer-logo-text {
+.logo__text--white  {
   color: var(--background-color);
 }
 .social {
