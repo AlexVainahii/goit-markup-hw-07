@@ -1,25 +1,3 @@
-
-
-
-
-
-
-
-
-.current,
-.logo,
-.nav-list__link:hover,
-.nav-list__link:focus,
-.contact-list__link:hover,
-.contact-list__link:focus,
-.address-link:hover,
-.address-link:focus,
-.modal-close-btn:hover,
-.modal-close-btn:focus {
-  color: var(--accent-text-color);
-  fill: var(--accent-text-color);
-}
-
 /* ----------------HEADER------------------- */
 /* ----------------HERO------------------- */
 /* ----------------Benefits------------------- */
@@ -29,164 +7,7 @@
 /* ----------------Team------------------- */
 /* ----------------Client------------------- */
 
-.client-list {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
-}
-.client-item {
-  width: 170px;
-  height: 92px;
-}
-.client-item + .client-item {
-  margin-left: 30px;
-}
-.client-link {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-  fill: var(--icon-color);
-  border: 1px solid var(--icon-color);
-  border-radius: 4px;
-  transition: fill var(--time-duration) var(--time-function),
-    border var(--time-duration) var(--time-function);
-}
-.client-link:hover,
-.client-link:focus {
-  fill: var(--accent-text-color);
-  border: 1px solid var(--accent-text-color);
-}
 /* ----------------Footer------------------- */
-.footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background-color: var(--primary-background-color);
-}
-.footer .container {
-  display: flex;
-  position: relative;
-}
-
-.logo__text--white  {
-  color: var(--background-color);
-}
-.social {
-  padding-top: 12px;
-  margin-left: 70px;
-}
-.address-item + .address-item {
-  margin-top: 9px;
-}
-.address-link {
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--contact-color);
-  transition: color var(--time-duration) var(--time-function);
-}
-.address {
-  margin-top: 20px;
-  max-width: 231px;
-  text-align: left;
-  color: var(--background-color);
-}
-.footer-title,
-.subscript-label {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--background-color);
-}
-/* .footer-soc-list {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-.footer-soc-item {
-  width: 44px;
-  height: 44px;
-}
-
-.footer-soc-item + .footer-soc-item {
-  margin-left: 10px;
-}
-.footer-soc-link {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.1);
-  fill: var(--background-color);
-  transition: background-color var(--time-duration) var(--time-function),
-    fill var(--time-duration) var(--time-function);
-}
-
-.footer-soc-link:hover,
-.footer-soc-link:focus {
-  fill: var(--background-color);
-  background-color: var(--accent-text-color);
-} */
-
-.subscription {
-  position: absolute;
-  display: flex;
-  right: 15px;
-  padding-top: 48px;
-}
-
-.subscript-label {
-  position: absolute;
-
-  top: 12px;
-}
-.subscript-input {
-  width: 358px;
-  height: 50px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 16px;
-  background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-  color: var(--contact-color);
-  transition: border-color var(--time-duration) var(--time-function);
-}
-.subscript-input::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-}
-.subscript-input:hover,
-.subscript-input:focus {
-  border-color: var(--accent-text-color);
-  cursor: pointer;
-  outline: none;
-}
-
-.footer__button {
-  display: flex;
-  width: 200px;
-  height: 50px;
-  margin-left: 12px;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 28px;
-}
-
-.btn-icon {
-  fill: var(--background-color);
-  margin-left: 10px;
-}
 
 /* ----------------BACKDROP------------------- */
 .backdrop {
@@ -216,7 +37,7 @@
   background-color: var(--background-color);
 }
 
-.modal-close-btn {
+.modal__close-btn {
   width: 30px;
   height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
