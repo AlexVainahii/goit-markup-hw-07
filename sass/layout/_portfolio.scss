@@ -3,13 +3,11 @@
   }
   
   .portfolio__list {
-    display: flex;
-    margin-left: -30px;
+    @include first_item_gridFlex (flex, null, -30px);
   }
   .portfolio__item {
     position: relative;
-    flex-basis: calc(100% / 3 - 30px);
-    margin-left: 30px;
+    @include gridFlex ();
   }
   .portfolio__img-box {
     position: absolute;
