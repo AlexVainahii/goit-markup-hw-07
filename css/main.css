@@ -766,7 +766,6 @@ b {
 .team__title {
   font-weight: 500;
   font-size: 16px;
-  color: var(--primary-text-color);
 }
 
 .team__text {
