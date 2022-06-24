@@ -819,7 +819,8 @@ body {
   max-width: 231px;
   text-align: left;
 }
-.address + .address {
+
+.address__item + .address__item {
   margin-top: 9px;
 }
 
