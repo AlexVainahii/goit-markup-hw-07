@@ -1,0 +1,20 @@
+@mixin font ($fw,$fs,$lh,$ls,$col) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+  color: $col; 
+  }
+  @mixin centerFlex ($type: flex) {
+    display: $type;
+    justify-content: center;
+    align-items: center;
+    }
+    b{
+      @include centerFlex ();
+    @include font(null, 14px, 1.14, 0.03em, var(--background-color));
+    @include font(null, null, 1.71, 0.03em, var(--secondary-text-color));
+    @include font(null, 14px, 1.14, 0.03em, null);
+    @include font(null, 14px, 1.71, 0.03em, var(--accent-text-color));
+    @include font(null, 14px, 1.71, 0.03em, var(--secondary-text-color));
+    }

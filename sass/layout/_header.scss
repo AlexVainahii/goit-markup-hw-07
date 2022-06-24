@@ -13,26 +13,26 @@
     padding-top: 24px;
     padding-bottom: 25px;
   }
-  .logo__text--black {
-    color: var(--accent-btn-text-color);
-  }
+ 
   
   .nav-list {
     display: flex;
     width: 294px;
+    &__item +  &__item {
+      margin-left: 50px;
+    }
   }
-  .nav-list__item + .nav-list__item {
-    margin-left: 50px;
-  }
+ 
   
   .contact-list {
     display: flex;
     margin-left: auto;
+    &__item +&__item {
+      margin-left: 50px;
+    }
   }
   
-  .contact-list__item + .contact-list__item {
-    margin-left: 50px;
-  }
+
   .contact-list__icon {
     display: inline-block;
   }
@@ -43,10 +43,8 @@
       fill var(--time-duration) var(--time-function);
     padding-top: 32px;
     padding-bottom: 32px;
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-  }
+    @include font(500, null, 1.14, 0.02em, null);
+   }
   .contact-list__link {
     color: var(--secondary-text-color);
     display: flex;
@@ -61,15 +59,16 @@
   
   .current {
     position: relative;
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: "";
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background: var(--accent-text-color);
+    }
   }
   
-  .current::after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    content: "";
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background: var(--accent-text-color);
-  }
+ 

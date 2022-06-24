@@ -8,51 +8,49 @@
   }
   
   .check-box__text {
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    color: #757575;
+    @include font(null, 14px, 1.71, 0.03em, var(--secondary-text-color));
     padding-left: 23px;
+    &::before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 16px;
+      height: 15px;
+      content: "";
+      background-image: url(../images/icon_box.svg);
+      fill: var(--primary-text-color);
+    }
+    &::after {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 16px;
+      height: 15px;
+      content: "";
+      background-image: url(../images/icon_check.svg);
+      fill: var(--accent-text-color);
+      opacity: 0;
+    }
+    .check-box__check:checked + &::before {
+      opacity: 0;
+    }
+    .check-box__check:checked + &::after {
+      opacity: 1;
+    }
+  
+    .check-box__check:focus + &{
+       outline: 1px solid var(--accent-text-color)
+      }
+  
+  
   }
   
-  .check-box__text::before {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    width: 16px;
-    height: 15px;
-    content: "";
-    background-image: url(../images/icon_box.svg);
-    fill: var(--primary-text-color);
-  }
-  .check-box__text::after {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    width: 16px;
-    height: 15px;
-    content: "";
-    background-image: url(../images/icon_check.svg);
-    fill: var(--accent-text-color);
-    opacity: 0;
-  }
-  .check-box__check:checked + .check-box__text::before {
-    opacity: 0;
-  }
-  .check-box__check:checked + .check-box__text::after {
-    opacity: 1;
-  }
 
-  .check-box__check:focus + .check-box__text{
-     outline: 1px solid var(--accent-text-color)
-    }
 
   .check-box__link {
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+    @include font(null, 14px, 1.71, 0.03em, var(--accent-text-color));
     text-decoration-line: underline;
-    color: var(--accent-text-color);
+
   }
