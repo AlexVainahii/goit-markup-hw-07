@@ -17,7 +17,7 @@
     text-align: center;
     }
   .team__title {
-    @include font(500, 16px,null, null, null);
+    @include font(500, 16px,null, null, var(--primary-text-color));
   }
   .team__text {
     margin-top: 10px;

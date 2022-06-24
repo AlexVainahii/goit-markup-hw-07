@@ -389,30 +389,6 @@ body {
   color: var(--primary-text-color);
 }
 
-b {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  color: var(--background-color);
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--secondary-text-color);
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--accent-text-color);
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--secondary-text-color);
-}
-
 .current,
 .logo,
 .nav-list__link:hover,
@@ -766,6 +742,7 @@ b {
 .team__title {
   font-weight: 500;
   font-size: 16px;
+  color: var(--primary-text-color);
 }
 
 .team__text {
@@ -817,7 +794,6 @@ b {
   padding-bottom: 60px;
   background-color: var(--primary-background-color);
 }
-
 .footer .container {
   display: flex;
   position: relative;
@@ -828,14 +804,22 @@ b {
   margin-left: 70px;
 }
 
+.footer__title,
+.subscript__label {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  color: var(--background-color);
+  text-transform: uppercase;
+}
+
 .address {
   margin-top: 20px;
   max-width: 231px;
   text-align: left;
-  color: var(--background-color);
 }
-
-.address__item + .address__item {
+.address + .address {
   margin-top: 9px;
 }
 
@@ -847,14 +831,7 @@ b {
   color: var(--contact-color);
   transition: color var(--time-duration) var(--time-function);
 }
-
-.footer__title,
-.subscript__label {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+.address__link--white {
   color: var(--background-color);
 }
 
@@ -886,13 +863,10 @@ b {
   color: var(--contact-color);
   transition: border-color var(--time-duration) var(--time-function);
 }
-
 .subscript__input::placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
-
-.subscript__input:hover,
-.subscript__input:focus {
+.subscript__input:hover, .subscript__input:focus {
   border-color: var(--accent-text-color);
   cursor: pointer;
   outline: none;
@@ -900,11 +874,11 @@ b {
 
 .subscript__button {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 200px;
   height: 50px;
   margin-left: 12px;
-  justify-content: center;
-  align-items: center;
   padding: 10px 28px;
 }
 
@@ -922,10 +896,6 @@ b {
   height: 100%;
 }
 
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0);
-}
-
 .modal {
   position: absolute;
   width: 528px;
@@ -939,6 +909,9 @@ b {
   transition: transform var(--time-duration) var(--time-function);
   background-color: var(--background-color);
 }
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+}
 
 .modal__close-btn {
   width: 30px;
@@ -949,20 +922,20 @@ b {
   top: 10px;
   right: 10px;
   display: flex;
-  background-color: var(--background-color);
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
   padding: 0;
 }
 
 .modal__text {
   margin-bottom: 12px;
-  font-size: 20px;
   font-weight: 700;
+  font-size: 20px;
   line-height: 1.15;
-  text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
+  text-align: center;
 }
 
 .modal__box-input {
@@ -970,6 +943,9 @@ b {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
+}
+.modal__box-input:hover, .modal__box-input:focus {
+  fill: var(--accent-text-color);
 }
 
 .modal__label {
@@ -1002,16 +978,14 @@ b {
   left: 12px;
   transition: fill var(--time-duration) var(--time-function);
 }
+.modal__input:focus ~ .modal__icon {
+  fill: var(--accent-text-color);
+}
 
 .modal__textarea {
   resize: none;
   height: 120px;
   padding: 12px 16px;
-}
-
-.modal__box-input:hover,
-.modal__box-input:focus {
-  fill: var(--accent-text-color);
 }
 
 .modal__textarea:hover,
@@ -1022,10 +996,6 @@ b {
   border-color: var(--accent-text-color);
   cursor: pointer;
   outline: none;
-}
-
-.modal__input:focus ~ .modal__icon {
-  fill: var(--accent-text-color);
 }
 
 .modal__check-box {
@@ -1066,31 +1036,25 @@ b {
   padding-right: 22px;
   padding-bottom: 6px;
   padding-left: 22px;
-  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-  text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
+  text-align: center;
   background-color: var(--team-background-color);
   cursor: pointer;
+}
+.filter__btn--current, .filter__btn:hover, .filter__btn:focus {
+  color: var(--background-color);
+  background-color: var(--accent-text-color);
+}
+.filter__btn:hover, .filter__btn:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .filter__item + .filter__item {
   margin-left: 8px;
-}
-
-.filter__btn--current,
-.filter__btn:hover,
-.filter__btn:focus {
-  color: var(--background-color);
-  background-color: var(--accent-text-color);
-}
-
-.filter__btn:hover,
-.filter__btn:focus {
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .project {
@@ -1105,6 +1069,9 @@ b {
   width: 370px;
   text-align: start;
 }
+.project__item:nth-child(n+4) {
+  margin-top: 30px;
+}
 
 .project__link {
   width: 100%;
@@ -1113,9 +1080,7 @@ b {
   display: block;
   border: none;
 }
-
-.project__link:hover,
-.project__link:focus {
+.project__link:hover, .project__link:focus {
   border: 1px solid var(--border-color);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   cursor: pointer;
@@ -1129,10 +1094,6 @@ b {
   border-right: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
   border-left: 1px solid var(--border-color);
-}
-
-.project__item:nth-child(n+4) {
-  margin-top: 30px;
 }
 
 .project__back {
@@ -1152,7 +1113,6 @@ b {
   padding: 63px 24px;
   background: rgba(33, 150, 243, 0.9);
 }
-
 .project__link:hover .project__back .project__back-box {
   transform: translateY(0%);
 }
