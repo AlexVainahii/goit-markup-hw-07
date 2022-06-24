@@ -735,7 +735,6 @@ body {
   border-radius: 0px 0px 4px 4px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  color: var(--background-color);
   text-align: center;
   background-color: var(--background-color);
 }
