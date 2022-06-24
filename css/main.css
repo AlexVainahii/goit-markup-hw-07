@@ -737,6 +737,7 @@ body {
   letter-spacing: 0.03em;
   color: var(--background-color);
   text-align: center;
+  background-color: var(--background-color);
 }
 
 .team__title {

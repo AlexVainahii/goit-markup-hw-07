@@ -14,6 +14,7 @@
     border-radius: 0px 0px 4px 4px;
     @include font(null,null, 1.19, 0.03em, var(--background-color));
     text-align: center;
+    background-color: var(--background-color)
     }
   .team__title {
     @include font(500, 16px,null, null, var(--primary-text-color));
